@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a first-year B.Tech CSE student specializing in web development and data structures">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of Ronel Abraham Mathew - First-year B.Tech CSE student specializing in web development, MERN stack, and AI">
+    <title>Ronel Abraham Mathew | Portfolio</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,12 +22,14 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <a href="#home">Portfolio</a>
+                <a href="#home">Ronel Abraham Mathew</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -42,12 +44,37 @@
     <section id="about" class="section about-section">
         <div class="container">
             <div class="about-content">
-                <h1 class="section-title">Hello, I'm <span class="highlight">Ronel</span></h1>
+                <h1 class="section-title">Hello, I'm <span class="highlight">Ronel Abraham Mathew</span></h1>
                 <p class="about-text">
-First-year B.Tech Computer Science and Engineering student specializing in full-stack web development with a strong foundation in data structures, algorithms, and UI/UX principles. Proficient in building responsive, user-centered applications that prioritize clean code architecture and seamless functionality. Actively developing technical expertise in modern web technologies and design systems while solving algorithmic challenges to strengthen problem-solving capabilities. Seeking software engineering opportunities to contribute to scalable solutions and grow as a developer through hands-on projects and collaborative development.
+                    Passionate first-year B.Tech Computer Science and Engineering student at Karunya Institute of Technology and Sciences with a strong interest in web development and artificial intelligence. Experienced in building full-stack applications using the MERN stack with a focus on creating user-friendly, ATS-optimized solutions. Active hackathon participant and open-source contributor continuously expanding technical skills through hands-on projects and collaborative development.
+                </p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-heading">Experience</h2>
+            <div class="experience-content">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Technical Trainee</h3>
+                            <p class="experience-company">GDG On Campus Karunya</p>
+                        </div>
+                        <span class="experience-date">Oct 2025 - Present</span>
+                    </div>
+                    <p class="experience-location">Coimbatore, Tamil Nadu, India (On-site)</p>
+                    <ul class="experience-details">
+                        <li>Engaged in web development training focusing on React.js and modern web technologies</li>
+                        <li>Collaborated with team members on technical projects and skill development initiatives</li>
+                        <li>Participated in workshops and training sessions on software engineering best practices</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -62,74 +89,103 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Gamified Learning Platform for Rural Education</h3>
-                        <a href="https://github.com/RM1338/rural-edu-gamification" target="_blank" class="github-link" aria-label="View on GitHub">
+                        <h3 class="project-title">Resume Builder Pro</h3>
+                        <a href="https://github.com/RM1338/resume-builder-pro" target="_blank" class="github-link" aria-label="View on GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
                     <p class="project-problem">
-                        <strong>Problem: </strong> A gamified digital platform to enhance learning outcomes for students in rural schools (grades 6-12), focusing on STEM subjects. The platform should use interactive games, multilingual content, and offline access to engage students with limited internet connectivity.
+                        <strong>Problem:</strong> Job seekers need ATS-optimized resumes that pass automated screening systems. Built a comprehensive resume builder with authentication and analytics to help users create professional, trackable resumes.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Tailwind CSS</span>
                     </div>
                     <ul class="project-features">
-                        <li>Custom animated dock with hover effects</li>
-                        <li>Minimal menu bar with icon states</li>
-                        <li>Smooth CSS transitions</li>
-                        <li>Mobile-responsive layouts</li>
+                        <li>Built ATS-optimized resume builder with MERN stack featuring JWT authentication and MongoDB Atlas integration</li>
+                        <li>Implemented secure user authentication, dashboard with CRUD operations, and RESTful API</li>
+                        <li>Designed responsive UI with Tailwind CSS and glassmorphic design with real-time form validation</li>
+                        <li>Features include resume analytics tracking (views & downloads) and cloud-based data persistence</li>
                     </ul>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">To Do List Application</h3>
-                        <a href="https://github.com/rm1338/todo-app" target="_blank" class="github-link" aria-label="View on GitHub">
+                        <h3 class="project-title">Gamified Nutrition Learning Platform</h3>
+                        <a href="https://github.com/RM1338/nutrition-gamification" target="_blank" class="github-link" aria-label="View on GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
                     <p class="project-problem">
-                        <strong>Problem:</strong> Understanding memory management and pointer operations is crucial for systems programming. Built interactive demonstrations to visualize pointer behavior and memory addresses, making abstract concepts tangible for learning.
+                        <strong>Problem:</strong> Promoting healthy eating habits through engaging digital experiences. Developed for Digital Campus 2.0 Hack Sprint (Google Cloud x GeeksforGeeks).
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">C</span>
-                        <span class="tech-tag">CLI</span>
-                        <span class="tech-tag">Memory Management</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Gamification</span>
                     </div>
                     <ul class="project-features">
-                        <li>Pointer address demonstration</li>
-                        <li>Dereferencing operations</li>
-                        <li>Value swapping using pointers</li>
-                        <li>Memory visualization</li>
+                        <li>Developed interactive gamified platform promoting healthy eating habits through games and quizzes</li>
+                        <li>Implemented personalized progress tracking with points, badges, achievements, and leaderboards</li>
+                        <li>Successfully qualified for Round 2 of the hackathon with innovative UX design</li>
+                        <li>Built educational content delivery system with competitive elements</li>
                     </ul>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Personal Portfolio Website</h3>
-                        <a href="https://github.com/rm1338/portfolio" target="_blank" class="github-link" aria-label="View on GitHub">
+                        <h3 class="project-title">To-do Master</h3>
+                        <a href="https://github.com/RM1338/todo-master" target="_blank" class="github-link" aria-label="View on GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
                     <p class="project-problem">
-                        <strong>Problem:</strong> As a First-year student I need a professional online presence to showcase projects and skills to recruiters and peers. This portfolio serves as a centralized hub for demonstrating technical abilities and project accomplishments.
+                        <strong>Problem:</strong> Students and professionals need efficient task management tools with modern UI/UX. Created a comprehensive productivity platform with advanced features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Context API</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Framer Motion</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Developed modern task management web application using React functional components</li>
+                        <li>Built comprehensive task organization with priority levels and category filtering</li>
+                        <li>Implemented personalized productivity tracking with statistics dashboard and completion metrics</li>
+                        <li>Designed responsive glassmorphic UI with dark/light theme toggle</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Gamified Platform for Rural Education</h3>
+                        <a href="https://github.com/RM1338/rural-edu-gamification" target="_blank" class="github-link" aria-label="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-problem">
+                        <strong>Problem:</strong> Rural students lack access to interactive and engaging educational content. Developed for Smart India Hackathon 2025 to make learning accessible and fun.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">GitHub Pages</span>
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">Multilingual</span>
                     </div>
                     <ul class="project-features">
-                        <li>Single-page responsive design</li>
-                        <li>Smooth scroll navigation</li>
-                        <li>Mobile-first approach</li>
-                        <li>Accessible color schemes</li>
+                        <li>Designed gamified learning platform making rural education interactive and accessible</li>
+                        <li>Implemented multilingual and offline learning support (English, Tamil, Hindi, Odia)</li>
+                        <li>Integrated reward-driven gamification with points, badges, streaks, and leaderboards</li>
+                        <li>Shortlisted from University for Smart India Hackathon 2025</li>
                     </ul>
                 </div>
 
@@ -147,8 +203,30 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                 <div class="skills-grid">
                     <div class="skill-card">
                         <div class="skill-header">
+                            <i class="fab fa-js"></i>
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">ES6+, async/await, DOM manipulation</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-python"></i>
+                            <h4>Python</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Comfortable</span>
+                        </div>
+                        <p class="skill-description">Data structures, algorithms, problem-solving</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
                             <i class="fab fa-c"></i>
-                            <h4>C</h4>
+                            <h4>C Programming</h4>
                         </div>
                         <div class="proficiency">
                             <span class="proficiency-badge comfortable">Comfortable</span>
@@ -158,13 +236,62 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                     
                     <div class="skill-card">
                         <div class="skill-header">
-                            <i class="fab fa-python"></i>
-                            <h4>Python</h4>
+                            <i class="fas fa-database"></i>
+                            <h4>SQL</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge learning">Learning</span>
+                            <span class="proficiency-badge familiar">Familiar</span>
                         </div>
-                        <p class="skill-description">Basic syntax, problem-solving</p>
+                        <p class="skill-description">MySQL, database design, queries</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Web Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-react"></i>
+                            <h4>React.js</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Hooks, Context API, component architecture</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-node-js"></i>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Backend development, RESTful APIs</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-server"></i>
+                            <h4>Express.js</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Middleware, routing, authentication</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h4>MongoDB</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">NoSQL, Mongoose, MongoDB Atlas</p>
                     </div>
                     
                     <div class="skill-card">
@@ -173,26 +300,26 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                             <h4>HTML5/CSS3</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge comfortable">Comfortable</span>
+                            <span class="proficiency-badge comfortable">Proficient</span>
                         </div>
-                        <p class="skill-description">Semantic markup, responsive design</p>
+                        <p class="skill-description">Semantic markup, responsive design, animations</p>
                     </div>
                     
                     <div class="skill-card">
                         <div class="skill-header">
-                            <i class="fab fa-js"></i>
-                            <h4>JavaScript</h4>
+                            <i class="fab fa-css3-alt"></i>
+                            <h4>Tailwind CSS</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge familiar">Familiar</span>
+                            <span class="proficiency-badge comfortable">Proficient</span>
                         </div>
-                        <p class="skill-description">DOM manipulation, event handling</p>
+                        <p class="skill-description">Utility-first CSS, responsive design</p>
                     </div>
                 </div>
             </div>
 
             <div class="skills-category">
-                <h3 class="category-title">Frameworks & Tools</h3>
+                <h3 class="category-title">Tools & Technologies</h3>
                 <div class="skills-grid">
                     <div class="skill-card">
                         <div class="skill-header">
@@ -200,9 +327,9 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                             <h4>Git/GitHub</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge comfortable">Comfortable</span>
+                            <span class="proficiency-badge comfortable">Proficient</span>
                         </div>
-                        <p class="skill-description">Version control, repository management</p>
+                        <p class="skill-description">Version control, collaboration, CI/CD</p>
                     </div>
                     
                     <div class="skill-card">
@@ -211,20 +338,20 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                             <h4>VS Code</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge comfortable">Comfortable</span>
+                            <span class="proficiency-badge comfortable">Proficient</span>
                         </div>
                         <p class="skill-description">Primary development environment</p>
                     </div>
                     
                     <div class="skill-card">
                         <div class="skill-header">
-                            <i class="fas fa-server"></i>
-                            <h4>GitHub Pages</h4>
+                            <i class="fas fa-lock"></i>
+                            <h4>JWT Authentication</h4>
                         </div>
                         <div class="proficiency">
-                            <span class="proficiency-badge familiar">Familiar</span>
+                            <span class="proficiency-badge comfortable">Comfortable</span>
                         </div>
-                        <p class="skill-description">Static site hosting</p>
+                        <p class="skill-description">Secure authentication, token management</p>
                     </div>
                     
                     <div class="skill-card">
@@ -235,8 +362,57 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
                         <div class="proficiency">
                             <span class="proficiency-badge learning">Learning</span>
                         </div>
-                        <p class="skill-description">UI wireframing</p>
+                        <p class="skill-description">UI/UX design, wireframing, prototyping</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <h2 class="section-heading">Achievements & Certifications</h2>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="achievement-title">Digital Campus 2.0 Hack Sprint</h3>
+                    <p class="achievement-org">Google Cloud & GeeksforGeeks</p>
+                    <p class="achievement-date">October 2025</p>
+                    <p class="achievement-description">Qualified for Round 2 with Gamified Nutrition Learning Platform</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="achievement-title">Smart India Hackathon 2025</h3>
+                    <p class="achievement-org">Government of India</p>
+                    <p class="achievement-date">September 2025</p>
+                    <p class="achievement-description">Shortlisted from University with Gamified Platform for Rural Education</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="achievement-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                    <p class="achievement-org">Oracle</p>
+                    <p class="achievement-date">August 2025</p>
+                    <p class="achievement-description">Foundational knowledge in AI and cloud infrastructure</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="achievement-title">OpenCV Bootcamp</h3>
+                    <p class="achievement-org">OpenCV</p>
+                    <p class="achievement-date">August 2025</p>
+                    <p class="achievement-description">Computer vision fundamentals and applications</p>
                 </div>
             </div>
         </div>
@@ -279,7 +455,7 @@ First-year B.Tech Computer Science and Engineering student specializing in full-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Portfolio. All rights reserved.</p>
+            <p>&copy; 2025 Ronel Abraham Mathew. All rights reserved.</p>
             <p class="last-updated">Last Updated: October 2025</p>
         </div>
     </footer>
