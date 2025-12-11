@@ -1,0 +1,505 @@
+/* --- BASE RESET & SYSTEM --- */
+:root {
+    --bg-wallpaper: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    --win-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    user-select: none; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-wallpaper) no-repeat center center/cover;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+    cursor: default;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+    height: 28px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+.top-bar span { 
+    margin: 0 10px; 
+    cursor: default; 
+}
+
+/* --- DESKTOP --- */
+.desktop {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: calc(100vh - 100px);
+    z-index: 10;
+    position: relative;
+}
+
+.icon {
+    width: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    transition: transform 0.1s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+.icon:active {
+    transform: scale(0.95);
+}
+
+.icon-img { 
+    font-size: 45px; 
+    margin-bottom: 5px; 
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); 
+}
+
+.icon-label { 
+    background: rgba(0,0,0,0.2); 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    font-size: 12px; 
+}
+
+/* --- WINDOW STYLING --- */
+.window {
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--win-shadow);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.window.active { 
+    display: flex; 
+    animation: windowOpen 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+@keyframes windowOpen {
+    from { 
+        opacity: 0; 
+        transform: scale(0.8) translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
+}
+
+@keyframes windowClose {
+    from { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
+    to { 
+        opacity: 0; 
+        transform: scale(0.8) translateY(20px); 
+    }
+}
+
+/* --- WINDOW POSITIONS --- */
+.window-about { 
+    top: 15%; 
+    left: 20%; 
+    width: 500px; 
+    height: 400px; 
+}
+
+.window-projects { 
+    top: 10%; 
+    left: 15%; 
+    width: 800px; 
+    height: 600px; 
+    background: #f5f5f7; 
+}
+
+.window-terminal { 
+    top: 25%; 
+    left: 30%; 
+    width: 550px; 
+    height: 400px; 
+    background: #1e1e1e; 
+}
+
+.window-contact { 
+    top: 15%; 
+    left: 30%; 
+    width: 550px; 
+    height: 500px; 
+}
+
+.window-skills {
+    top: 12%;
+    left: 18%;
+    width: 700px;
+    height: 550px;
+}
+
+.window-experience {
+    top: 8%;
+    left: 22%;
+    width: 750px;
+    height: 600px;
+}
+
+.window-detail {
+    top: 10%;
+    left: 25%;
+    width: 700px;
+    height: 550px;
+}
+
+/* --- PROJECT CARDS --- */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.project-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    margin: 0 0 8px 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.tech-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #007aff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 12px;
+}
+
+.project-link:hover {
+    background: #0051d5;
+    transform: translateY(-1px);
+}
+
+.project-link:active {
+    transform: translateY(0);
+}
+
+/* --- WINDOW UI PARTS --- */
+.title-bar {
+    height: 30px;
+    background: linear-gradient(to bottom, #ececec, #dcdcdc);
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: move;
+}
+
+.title-bar:active {
+    cursor: grabbing;
+}
+
+.terminal-bar { 
+    background: #3a3a3a; 
+    border-bottom: 1px solid #222; 
+}
+
+.buttons { 
+    display: flex; 
+    gap: 8px; 
+    z-index: 2; 
+}
+
+.buttons button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.buttons button:hover {
+    filter: brightness(1.2);
+}
+
+.btn-close { 
+    background: #ff5f56; 
+}
+
+.btn-minimize { 
+    background: #ffbd2e; 
+}
+
+.btn-maximize { 
+    background: #27c93f; 
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+.content { 
+    padding: 20px; 
+    overflow-y: auto; 
+    flex: 1; 
+}
+
+/* --- TERMINAL STYLE --- */
+.terminal-content {
+    font-family: 'Courier New', monospace;
+    color: #33ff00;
+    font-size: 13px;
+}
+
+#terminalInput {
+    background: transparent;
+    border: none;
+    color: #33ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    outline: none;
+    width: 100%;
+}
+
+.green { 
+    color: #27c93f; 
+}
+
+.blue { 
+    color: #007aff; 
+}
+
+.cursor { 
+    animation: blink 1s infinite; 
+}
+
+@keyframes blink { 
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0; } 
+}
+
+/* --- DOCK --- */
+.dock-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5000;
+}
+
+.dock {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 16px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dock-item {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dock-item:hover { 
+    transform: scale(1.4) translateY(-15px); 
+}
+
+/* --- CONTACT FORM --- */
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.form-group label { 
+    font-size: 14px; 
+    font-weight: 600; 
+    margin-bottom: 5px; 
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+    background: #0051d5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,122,255,0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* --- CONTEXT MENU --- */
+.context-menu {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 10000;
+    min-width: 180px;
+}
+
+.context-menu.active { 
+    display: block; 
+}
+
+.context-menu-item {
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.context-menu-item:hover { 
+    background: #007aff; 
+    color: white; 
+}
+
+/* --- EXPERIENCE & SKILLS CARDS --- */
+.experience-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+/* --- SCROLLBAR STYLING --- */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* --- BUTTON HOVER EFFECTS --- */
+button, a, .dock-item, .icon {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+    .window {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+    
+    .dock {
+        padding: 8px 15px;
+        gap: 15px;
+    }
+    
+    .dock-item {
+        font-size: 24px;
+    }
+}
