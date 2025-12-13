@@ -3,912 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronel's Portfolio | macOS</title>
+    <meta name="description" content="Portfolio of Ronel Abraham Mathew - First-year B.Tech CSE student specializing in web development, MERN stack, and AI">
+    <title>Ronel Abraham Mathew | Portfolio</title>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="top-bar">
-        <div>
-            <i class="fab fa-apple"></i>
-            <strong>Ronel Portfolio</strong>
-            <span>File</span>
-            <span>Edit</span>
-            <span>View</span>
-            <span>Window</span>
-            <span>Help</span>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">Ronel Abraham Mathew</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div>
-            <span><i class="fas fa-battery-full"></i></span>
-            <span><i class="fas fa-wifi"></i></span>
-            <span id="dateTime">Fri Dec 12 2:44 AM</span>
-        </div>
-    </div>
+    </nav>
 
-    <div class="desktop" id="desktop">
-        <div class="icon" data-window="about">
-            <div class="icon-img" style="color: #1fb6ff;"><i class="fas fa-user-circle"></i></div>
-            <span class="icon-label">About Me</span>
-        </div>
-        <div class="icon" data-window="projects">
-            <div class="icon-img" style="color: #007aff;"><i class="fas fa-folder"></i></div>
-            <span class="icon-label">Projects</span>
-        </div>
-        <div class="icon" data-window="skills">
-            <div class="icon-img" style="color: #ff9500;"><i class="fas fa-code"></i></div>
-            <span class="icon-label">Skills</span>
-        </div>
-        <div class="icon" data-window="experience">
-            <div class="icon-img" style="color: #af52de;"><i class="fas fa-briefcase"></i></div>
-            <span class="icon-label">Experience</span>
-        </div>
-        <div class="icon" data-window="terminal">
-            <div class="icon-img terminal-icon"><i class="fas fa-terminal"></i></div>
-            <span class="icon-label">Terminal</span>
-        </div>
-        <div class="icon" data-window="contact">
-            <div class="icon-img" style="color: #34c759;"><i class="fas fa-envelope"></i></div>
-            <span class="icon-label">Contact</span>
-        </div>
-        <a href="https://github.com/RM1338" target="_blank" class="icon" style="text-decoration: none;">
-            <div class="icon-img" style="color: #fff; background: #000; border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center;">
-                <i class="fab fa-github"></i>
-            </div>
-            <span class="icon-label">GitHub</span>
-        </a>
-    </div>
-
-    <!-- About Window -->
-    <div class="window window-about" data-window-id="about">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">About Me.txt</div>
-        </div>
-        <div class="content">
-            <h1>Ronel Abraham Mathew</h1>
-            <h3 style="color: #007aff;">B.Tech CSE Student & Aspiring Software Engineer</h3>
-            <p style="margin: 15px 0; line-height: 1.6;">Passionate about building OS simulations, game clones, and secure applications. I love creating interactive experiences and solving complex problems through code.</p>
-            <hr style="margin: 15px 0;">
-            <p style="margin: 8px 0;"><i class="fas fa-envelope" style="margin-right: 8px; color: #007aff;"></i> rma80070@gmail.com</p>
-            <p style="margin: 8px 0;"><i class="fab fa-linkedin" style="margin-right: 8px; color: #0077b5;"></i> LinkedIn/ronelm</p>
-            <p style="margin: 8px 0;"><i class="fab fa-github" style="margin-right: 8px; color: #333;"></i> github.com/RM1338</p>
-            <p style="margin: 8px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #ff3b30;"></i> Pathanamthitta, Kerala, India</p>
-            
-            <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #007aff;">
-                <strong style="color: #007aff;">💡 Current Focus:</strong>
-                <p style="margin: 8px 0 0 0; color: #555;">Building innovative web applications, exploring game development, and contributing to open-source projects.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Skills Window -->
-    <div class="window window-skills" data-window-id="skills">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">Skills & Technologies</div>
-        </div>
-        <div class="content" style="padding: 30px;">
-            <h2 style="margin-bottom: 25px; color: #007aff;">Technical Skills</h2>
-            
-            <div class="skill-category">
-                <h3 style="color: #ff9500; margin-bottom: 12px;"><i class="fas fa-code"></i> Programming Languages</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-                    <span class="tech-badge" style="background: #00599C;">C</span>
-                    <span class="tech-badge" style="background: #f7df1e; color: #333;">JavaScript</span>
-                    <span class="tech-badge" style="background: #3178c6;">TypeScript</span>
-                    <span class="tech-badge" style="background: #3776ab;">Python</span>
-                    <span class="tech-badge" style="background: #e44d26;">HTML5</span>
-                    <span class="tech-badge" style="background: #1572b6;">CSS3</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 style="color: #61dafb; margin-bottom: 12px;"><i class="fas fa-laptop-code"></i> Frameworks & Libraries</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-                    <span class="tech-badge" style="background: #61dafb; color: #000;">React.js</span>
-                    <span class="tech-badge" style="background: #339933;">Node.js</span>
-                    <span class="tech-badge" style="background: #000000;">Express.js</span>
-                    <span class="tech-badge" style="background: #38bdf8;">Tailwind CSS</span>
-                    <span class="tech-badge" style="background: #7952b3;">Bootstrap</span>
-                    <span class="tech-badge" style="background: #ff3b30;">Raylib</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 style="color: #47a248; margin-bottom: 12px;"><i class="fas fa-database"></i> Databases & Tools</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-                    <span class="tech-badge" style="background: #47a248;">MongoDB</span>
-                    <span class="tech-badge" style="background: #4479a1;">MySQL</span>
-                    <span class="tech-badge" style="background: #f05032;">Git</span>
-                    <span class="tech-badge" style="background: #181717;">GitHub</span>
-                    <span class="tech-badge" style="background: #007acc;">VS Code</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3 style="color: #af52de; margin-bottom: 12px;"><i class="fas fa-tools"></i> Other Skills</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span class="tech-badge" style="background: #0088cc;">RESTful APIs</span>
-                    <span class="tech-badge" style="background: #000000;">JWT Auth</span>
-                    <span class="tech-badge" style="background: #ff6b6b;">Responsive Design</span>
-                    <span class="tech-badge" style="background: #6366f1;">UI/UX Design</span>
-                    <span class="tech-badge" style="background: #10b981;">Problem Solving</span>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <h1 class="section-title">Hello, I'm <span class="highlight">Ronel Abraham Mathew</span></h1>
+                <p class="about-text">
+                    Passionate first-year B.Tech Computer Science and Engineering student at Karunya Institute of Technology and Sciences with a strong interest in web development and artificial intelligence. Experienced in building full-stack applications using the MERN stack with a focus on creating user-friendly, ATS-optimized solutions. Active hackathon participant and open-source contributor continuously expanding technical skills through hands-on projects and collaborative development.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Experience Window -->
-    <div class="window window-experience" data-window-id="experience">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">Experience & Education</div>
-        </div>
-        <div class="content" style="padding: 30px;">
-            <h2 style="margin-bottom: 25px; color: #007aff;">Education & Achievements</h2>
-            
-            <div class="experience-card">
-                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
-                    <div>
-                        <h3 style="color: #007aff; margin: 0;"><i class="fas fa-graduation-cap"></i> Bachelor of Technology in CSE</h3>
-                        <p style="color: #666; margin: 5px 0;">Karunya Institute of Technology and Sciences</p>
-                    </div>
-                    <span style="color: #999; font-size: 14px;">2025 - 2029</span>
-                </div>
-                <p style="color: #555; line-height: 1.6;">Currently pursuing B.Tech in Computer Science and Engineering with focus on Software Engineering, Data Structures, and Algorithms.</p>
-            </div>
-
-            <div class="experience-card">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                    <h3 style="color: #ff9500; margin: 0;"><i class="fas fa-trophy"></i> Hackathon Achievement</h3>
-                </div>
-                <p style="color: #555; margin: 8px 0; line-height: 1.6;"><strong>Digital Campus 2.0 Hack Sprint</strong> - Qualified for Round 2 with Diet Dash project, a gamified nutrition learning platform.</p>
-                <div style="background: #d1ecf1; padding: 10px; border-radius: 6px; margin-top: 10px;">
-                    <p style="color: #0c5460; font-size: 13px; margin: 0;">Competed against 600 participants campuswide</p>
-                </div>
-            </div>
-
-            <div class="experience-card">
-                <h3 style="color: #34c759; margin: 0 0 10px 0;"><i class="fas fa-project-diagram"></i> Project Highlights</h3>
-                <ul style="margin: 0; padding-left: 20px; color: #555; line-height: 1.8;">
-                    <li><strong>5+ Completed Projects</strong> across different tech stacks</li>
-                    <li><strong>Game Development</strong> with C and Raylib</li>
-                    <li><strong>Full Stack Applications</strong> using MERN stack</li>
-                    <li><strong>Security Focused</strong> password management systems</li>
-                    <li><strong>Open Source</strong> contributions on GitHub</li>
-                </ul>
-            </div>
-
-            <div class="experience-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                <h3 style="color: white; margin: 0 0 10px 0;"><i class="fas fa-rocket"></i> Currently Learning</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 13px;">Advanced React Patterns</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 13px;">System Design</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 13px;">DevOps</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 13px;">Cloud Technologies</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terminal Window -->
-    <div class="window window-terminal" data-window-id="terminal">
-        <div class="title-bar terminal-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title" style="color: #bbb;">zsh — 80x24</div>
-        </div>
-        <div class="content terminal-content" id="terminalContent">
-            <p><span class="green">ronel@macbook</span>:<span class="blue">~</span>$ <span id="terminalPrompt"></span><span class="cursor">_</span></p>
-        </div>
-    </div>
-
-    <!-- Projects Window -->
-    <div class="window window-projects" data-window-id="projects">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">Projects — Local</div>
-        </div>
-        <div class="content" style="padding: 30px;">
-            <h2 style="margin-bottom: 25px; color: #007aff;">My Projects</h2>
-            
-            <!-- FlappyBird -->
-            <div class="project-card" data-project="flappy">
-                <div class="project-header">
-                    <i class="fas fa-gamepad" style="font-size: 35px; color: #ff9500;"></i>
-                    <div>
-                        <h3>Flappy Bird Clone</h3>
-                        <div style="display: flex; gap: 8px; margin: 8px 0;">
-                            <span class="tech-badge" style="background: #00599C;">C</span>
-                            <span class="tech-badge" style="background: #ff3b30;">Raylib</span>
-                            <span class="tech-badge" style="background: #34c759;">Complete</span>
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-heading">Experience</h2>
+            <div class="projects-grid">
+                <!-- Experience Card -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Technical Trainee</h3>
+                        <div class="achievement-icon-header">
+                            <i class="fas fa-briefcase"></i>
                         </div>
                     </div>
-                </div>
-                <p style="margin: 12px 0; color: #666; line-height: 1.6;">A modern recreation of the classic Flappy Bird game built from scratch in C using Raylib framework with smooth physics, procedural pipe generation, and a life system.</p>
-                <div style="margin: 10px 0;">
-                    <strong style="color: #333;">Key Features:</strong>
-                    <ul style="margin: 8px 0 0 20px; color: #666; font-size: 14px;">
-                        <li>3 Lives system with respawn countdown</li>
-                        <li>Screen shake effects & pixel art graphics</li>
-                        <li>Adjustable volume & persistent settings</li>
-                        <li>High score tracking across sessions</li>
+                    <p class="achievement-org">
+                        <strong>Company:</strong> GDG On Campus Karunya<br>
+                        <strong>Duration:</strong> Oct 2025 - Present<br>
+                        <strong>Location:</strong> Coimbatore, Tamil Nadu, India (On-site)
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">Team Collaboration</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Engaged in web development training focusing on React.js and modern web technologies</li>
+                        <li>Collaborated with team members on technical projects and skill development initiatives</li>
+                        <li>Participated in workshops and training sessions on software engineering best practices</li>
                     </ul>
                 </div>
-                <a href="https://github.com/RM1338/FlappyBird" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <button class="project-link" style="background: #5856d6; border: none; cursor: pointer;">
-                    <i class="fas fa-info-circle"></i> View Details
-                </button>
             </div>
+        </div>
+    </section>
 
-            <!-- PassGuard -->
-            <div class="project-card" data-project="passguard">
-                <div class="project-header">
-                    <i class="fas fa-shield-alt" style="font-size: 35px; color: #34c759;"></i>
-                    <div>
-                        <h3>PassGuard - Password Manager</h3>
-                        <div style="display: flex; gap: 8px; margin: 8px 0;">
-                            <span class="tech-badge" style="background: #00599C;">C</span>
-                            <span class="tech-badge" style="background: #ff3b30;">Raylib</span>
-                            <span class="tech-badge" style="background: #007aff;">Security</span>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-heading">Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Resume Builder Pro</h3>
+                        <a href="https://github.com/RM1338/resume-builder.git" target="_blank" class="github-link" aria-label="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-problem">
+                        <strong>Problem:</strong> Job seekers need ATS-optimized resumes that pass automated screening systems. Built a comprehensive resume builder with authentication and analytics to help users create professional, trackable resumes.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Built ATS-optimized resume builder with MERN stack featuring JWT authentication and MongoDB Atlas integration</li>
+                        <li>Implemented secure user authentication, dashboard with CRUD operations, and RESTful API</li>
+                        <li>Designed responsive UI with Tailwind CSS and glassmorphic design with real-time form validation</li>
+                        <li>Features include resume analytics tracking (views & downloads) and cloud-based data persistence</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Gamified Nutrition Learning Platform</h3>
+                        <a href="https://github.com/RM1338/diet-dash.git" target="_blank" class="github-link" aria-label="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-problem">
+                        <strong>Problem:</strong> Promoting healthy eating habits through engaging digital experiences. Developed for Digital Campus 2.0 Hack Sprint (Google Cloud x GeeksforGeeks).
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Gamification</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Developed interactive gamified platform promoting healthy eating habits through games and quizzes</li>
+                        <li>Implemented personalized progress tracking with points, badges, achievements, and leaderboards</li>
+                        <li>Successfully qualified for Round 2 of the hackathon with innovative UX design</li>
+                        <li>Built educational content delivery system with competitive elements</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">To-do Master</h3>
+                        <a href="https://github.com/RM1338/todo-app.git" target="_blank" class="github-link" aria-label="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-problem">
+                        <strong>Problem:</strong> Students and professionals need efficient task management tools with modern UI/UX. Created a comprehensive productivity platform with advanced features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Context API</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Framer Motion</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Developed modern task management web application using React functional components</li>
+                        <li>Built comprehensive task organization with priority levels and category filtering</li>
+                        <li>Implemented personalized productivity tracking with statistics dashboard and completion metrics</li>
+                        <li>Designed responsive glassmorphic UI with dark/light theme toggle</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Gamified Platform for Rural Education</h3>
+                        <a href="https://github.com/RM1338/edunova.git" target="_blank" class="github-link" aria-label="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-problem">
+                        <strong>Problem:</strong> Rural students lack access to interactive and engaging educational content. Developed for Smart India Hackathon 2025 to make learning accessible and fun.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">Multilingual</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Designed gamified learning platform making rural education interactive and accessible</li>
+                        <li>Implemented multilingual and offline learning support (English, Tamil, Hindi, Odia)</li>
+                        <li>Integrated reward-driven gamification with points, badges, streaks, and leaderboards</li>
+                        <li>Shortlisted from University for Smart India Hackathon 2025</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-heading">Technical Skills</h2>
+            
+            <div class="skills-category">
+                <h3 class="category-title">Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-js"></i>
+                            <h4>JavaScript</h4>
                         </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">ES6+, async/await, DOM manipulation</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-python"></i>
+                            <h4>Python</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Comfortable</span>
+                        </div>
+                        <p class="skill-description">Data structures, algorithms, problem-solving</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-c"></i>
+                            <h4>C Programming</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Comfortable</span>
+                        </div>
+                        <p class="skill-description">Pointers, memory management, data structures</p>
                     </div>
                 </div>
-                <p style="margin: 12px 0; color: #666; line-height: 1.6;">Local password management application with Caesar cipher encryption and interactive GUI. Built for educational purposes with comprehensive user management features.</p>
-                <div style="margin: 10px 0;">
-                    <strong style="color: #333;">Key Features:</strong>
-                    <ul style="margin: 8px 0 0 20px; color: #666; font-size: 14px;">
-                        <li>Caesar Cipher encryption for passwords</li>
-                        <li>User registration, login, and authentication</li>
-                        <li>Search, sort, and view all users</li>
-                        <li>Persistent storage with automatic save/load</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 10px; padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; font-size: 13px;">
-                    <strong>Note:</strong> Educational project - Caesar cipher is not cryptographically secure
-                </div>
-                <a href="https://github.com/RM1338/PassGuard" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <button class="project-link" style="background: #5856d6; border: none; cursor: pointer;">
-                    <i class="fas fa-info-circle"></i> View Details
-                </button>
             </div>
 
-            <!-- DietDash -->
-            <div class="project-card" data-project="dietdash">
-                <div class="project-header">
-                    <i class="fas fa-leaf" style="font-size: 35px; color: #22d3ee;"></i>
-                    <div>
-                        <h3>Diet Dash - Gamified Nutrition</h3>
-                        <div style="display: flex; gap: 8px; margin: 8px 0;">
-                            <span class="tech-badge" style="background: #61DAFB;">React 18</span>
-                            <span class="tech-badge" style="background: #339933;">Node.js</span>
-                            <span class="tech-badge" style="background: #47A248;">MongoDB</span>
+            <div class="skills-category">
+                <h3 class="category-title">Web Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-react"></i>
+                            <h4>React.js</h4>
                         </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Hooks, Context API, component architecture</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-node-js"></i>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Backend development, RESTful APIs</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-server"></i>
+                            <h4>Express.js</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Middleware, routing, authentication</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h4>MongoDB</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">NoSQL, Mongoose, MongoDB Atlas</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h4>SQL</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge familiar">Familiar</span>
+                        </div>
+                        <p class="skill-description">MySQL, database design, queries</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-html5"></i>
+                            <h4>HTML5/CSS3</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Semantic markup, responsive design, animations</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-css3-alt"></i>
+                            <h4>Tailwind CSS</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Utility-first CSS, responsive design</p>
                     </div>
                 </div>
-                <p style="margin: 12px 0; color: #666; line-height: 1.6;">Interactive web application that makes learning about nutrition fun through gamification. Features 6 educational games, leaderboards, and multi-role support.</p>
-                <div style="margin: 10px 0;">
-                    <strong style="color: #333;">Key Features:</strong>
-                    <ul style="margin: 8px 0 0 20px; color: #666; font-size: 14px;">
-                        <li>6 nutrition games (Food Sorting, Meal Creator, Quiz, etc.)</li>
-                        <li>Points, levels, badges & global leaderboards</li>
-                        <li>Student, Teacher, and Parent accounts</li>
-                        <li>JWT authentication & responsive design</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 10px; padding: 10px; background: #d1ecf1; border-left: 4px solid #17a2b8; border-radius: 4px; font-size: 13px;">
-                    <strong>Achievement:</strong> Qualified for Round 2 - Digital Campus 2.0 Hack Sprint
-                </div>
-                <a href="https://github.com/RM1338/diet-dash" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <button class="project-link" style="background: #5856d6; border: none; cursor: pointer;">
-                    <i class="fas fa-info-circle"></i> View Details
-                </button>
             </div>
 
-            <!-- VenturaFund -->
-            <div class="project-card" data-project="venturafund">
-                <div class="project-header">
-                    <i class="fas fa-heart" style="font-size: 35px; color: #e74c3c;"></i>
-                    <div>
-                        <h3>VenturaFund - Crowdfunding Platform</h3>
-                        <div style="display: flex; gap: 8px; margin: 8px 0;">
-                            <span class="tech-badge" style="background: #E34F26;">HTML5</span>
-                            <span class="tech-badge" style="background: #1572B6;">CSS3</span>
-                            <span class="tech-badge" style="background: #7952B3;">Bootstrap 5</span>
+            <div class="skills-category">
+                <h3 class="category-title">Tools & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fab fa-git-alt"></i>
+                            <h4>Git/GitHub</h4>
                         </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Version control, collaboration, CI/CD</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h4>VS Code</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Proficient</span>
+                        </div>
+                        <p class="skill-description">Primary development environment</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-lock"></i>
+                            <h4>JWT Authentication</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge comfortable">Comfortable</span>
+                        </div>
+                        <p class="skill-description">Secure authentication, token management</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-pen-nib"></i>
+                            <h4>Figma</h4>
+                        </div>
+                        <div class="proficiency">
+                            <span class="proficiency-badge learning">Learning</span>
+                        </div>
+                        <p class="skill-description">UI/UX design, wireframing, prototyping</p>
                     </div>
                 </div>
-                <p style="margin: 12px 0; color: #666; line-height: 1.6;">Multi-category crowdfunding platform enabling users to create and support campaigns across Medical, Educational, Business, and Emergency needs with secure donation system.</p>
-                <div style="margin: 10px 0;">
-                    <strong style="color: #333;">Key Features:</strong>
-                    <ul style="margin: 8px 0 0 20px; color: #666; font-size: 14px;">
-                        <li>4 campaign categories with detailed tracking</li>
-                        <li>Campaign creation wizard & progress visualization</li>
-                        <li>Ready for Stripe, PayPal, Razorpay integration</li>
-                        <li>Responsive design with modern UI/UX</li>
-                    </ul>
-                </div>
-                <a href="https://github.com/RM1338/VenturaFund" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <button class="project-link" style="background: #5856d6; border: none; cursor: pointer;">
-                    <i class="fas fa-info-circle"></i> View Details
-                </button>
             </div>
+        </div>
+    </section>
 
-            <!-- Todo Master -->
-            <div class="project-card" data-project="todomaster">
-                <div class="project-header">
-                    <i class="fas fa-tasks" style="font-size: 35px; color: #6366f1;"></i>
-                    <div>
-                        <h3>Todo Master - Task Management</h3>
-                        <div style="display: flex; gap: 8px; margin: 8px 0;">
-                            <span class="tech-badge" style="background: #61DAFB;">React 18</span>
-                            <span class="tech-badge" style="background: #1572B6;">CSS3</span>
-                            <span class="tech-badge" style="background: #6366f1;">Context API</span>
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <h2 class="section-heading">Achievements & Certifications</h2>
+            <div class="projects-grid">
+                
+                <!-- Achievement 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Digital Campus 2.0 Hack Sprint</h3>
+                        <div class="achievement-icon-header">
+                            <i class="fas fa-trophy"></i>
                         </div>
                     </div>
-                </div>
-                <p style="margin: 12px 0; color: #666; line-height: 1.6;">Modern task management application with glassmorphic design, featuring advanced filtering, statistics dashboard, and local storage persistence.</p>
-                <div style="margin: 10px 0;">
-                    <strong style="color: #333;">Key Features:</strong>
-                    <ul style="margin: 8px 0 0 20px; color: #666; font-size: 14px;">
-                        <li>Add, edit, delete tasks with priority levels</li>
-                        <li>Filter by status, category, priority with search</li>
-                        <li>Dark/Light theme toggle & statistics dashboard</li>
-                        <li>LocalStorage persistence & PWA-ready</li>
+                    <p class="achievement-org">
+                        <strong>Organizer:</strong> Google Cloud & GeeksforGeeks<br>
+                        <strong>Date:</strong> October 2025
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Hackathon</span>
+                        <span class="tech-tag">Round 2 Qualifier</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Qualified for Round 2 with Gamified Nutrition Learning Platform</li>
+                        <li>Developed innovative solution promoting healthy eating habits through gamification</li>
                     </ul>
                 </div>
-                <a href="https://github.com/RM1338/todo-app" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <button class="project-link" style="background: #5856d6; border: none; cursor: pointer;">
-                    <i class="fas fa-info-circle"></i> View Details
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Contact Window -->
-    <div class="window window-contact" data-window-id="contact">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">Contact Me</div>
-        </div>
-        <div class="content">
-            <h2 style="margin-bottom: 20px;">Get in Touch</h2>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" required>
+                <!-- Achievement 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Smart India Hackathon 2025</h3>
+                        <div class="achievement-icon-header">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <p class="achievement-org">
+                        <strong>Organizer:</strong> Government of India<br>
+                        <strong>Date:</strong> September 2025
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Hackathon</span>
+                        <span class="tech-tag">University Shortlisted</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Shortlisted from University with Gamified Platform for Rural Education</li>
+                        <li>Focused on making education accessible and interactive for rural students</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" required>
+
+                <!-- Achievement 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                        <div class="achievement-icon-header">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <p class="achievement-org">
+                        <strong>Issuer:</strong> Oracle<br>
+                        <strong>Date:</strong> August 2025
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI Foundations</span>
+                        <span class="tech-tag">Cloud Infrastructure</span>
+                        <span class="tech-tag">Oracle</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Foundational knowledge in AI and cloud infrastructure technologies</li>
+                        <li>Understanding of Oracle Cloud services and AI implementation</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="4" required></textarea>
+
+                <!-- Achievement 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">OpenCV Bootcamp</h3>
+                        <div class="achievement-icon-header">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <p class="achievement-org">
+                        <strong>Issuer:</strong> OpenCV<br>
+                        <strong>Date:</strong> August 2025
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Image Processing</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Computer vision fundamentals and practical applications</li>
+                        <li>Hands-on experience with image processing techniques</li>
+                    </ul>
                 </div>
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </div>
-    </div>
 
-    <!-- Context Menu -->
-    <div class="context-menu" id="contextMenu">
-        <div class="context-menu-item" data-action="refresh"><i class="fas fa-sync"></i> Refresh</div>
-        <div class="context-menu-item" data-action="wallpaper"><i class="fas fa-image"></i> Change Wallpaper</div>
-    </div>
-
-    <!-- Project Detail Windows -->
-    
-    <!-- Flappy Bird Detail -->
-    <div class="window window-detail" data-window-id="flappy" style="width: 700px; height: 550px;">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
             </div>
-            <div class="title">README.md — FlappyBird</div>
         </div>
-        <div class="content" style="background: #fff;">
-            <h1 style="font-size: 28px; margin-bottom: 15px;">Flappy Bird - C Game Clone</h1>
-            <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-                <span class="tech-badge" style="background: #00599C;">C</span>
-                <span class="tech-badge" style="background: #ff3b30;">Raylib</span>
-                <span class="tech-badge" style="background: #ffcc00; color: #333;">Game</span>
-                <span class="tech-badge" style="background: #34c759;">Complete</span>
-            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="contact-intro">Feel free to reach out for collaborations, projects, or just a friendly chat about technology!</p>
             
-            <p style="margin-bottom: 20px; line-height: 1.6; color: #555;">A modern recreation of the classic Flappy Bird game, built from scratch in C using the Raylib framework with smooth physics, realistic gravity, and endless gameplay.</p>
-            
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">✨ Features</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li><strong>Smooth Physics:</strong> Realistic gravity and flapping mechanics</li>
-                <li><strong>Procedural Generation:</strong> Random pipes for endless gameplay</li>
-                <li><strong>Life System:</strong> 3 Lives with respawn countdown</li>
-                <li><strong>Screen Shake:</strong> Impact feedback on collisions (toggleable)</li>
-                <li><strong>Audio:</strong> Wing flap, scoring, and collision sounds</li>
-                <li><strong>Settings:</strong> Adjustable volume & persistent configuration</li>
-                <li><strong>High Score:</strong> Track best performance across sessions</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🛠️ Installation</h3>
-            <div style="background: #f6f8fa; padding: 15px; border-radius: 8px; border: 1px solid #e1e4e8; font-family: 'Courier New', monospace; font-size: 13px; margin-bottom: 15px;">
-git clone https://github.com/RM1338/FlappyBird.git
-cd FlappyBird
-gcc src/*.c -o flappy_bird -lraylib -lm
-./flappy_bird
-            </div>
-            
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <a href="https://github.com/RM1338/FlappyBird" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
+            <div class="contact-links">
+                <a href="mailto:rma80070@gmail.com" class="contact-card" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <p>rma80070@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a href="https://linkedin.com/in/ronelm" target="_blank" class="contact-card" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-info">
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me</p>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/RM1338" target="_blank" class="contact-card" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <p>View my code</p>
+                    </div>
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- PassGuard Detail -->
-    <div class="window window-detail" data-window-id="passguard" style="width: 700px; height: 550px;">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">README.md — PassGuard</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ronel Abraham Mathew. All rights reserved.</p>
+            <p class="last-updated">Last Updated: October 2025</p>
         </div>
-        <div class="content" style="background: #fff;">
-            <h1 style="font-size: 28px; margin-bottom: 15px;">PassGuard - Local Password Manager</h1>
-            <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-                <span class="tech-badge" style="background: #00599C;">C</span>
-                <span class="tech-badge" style="background: #ff3b30;">Raylib</span>
-                <span class="tech-badge" style="background: #007aff;">Security</span>
-            </div>
-            
-            <p style="margin-bottom: 20px; line-height: 1.6; color: #555;">A local password management application designed for learning purposes with Caesar cipher encryption and interactive GUI powered by Raylib.</p>
-            
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">✨ Key Features</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li><strong>Security:</strong> Caesar Cipher Encryption for all passwords</li>
-                <li><strong>User Management:</strong> Registration, Login, View, Search, and Sort</li>
-                <li><strong>GUI:</strong> Clean interface with real-time feedback</li>
-                <li><strong>Persistence:</strong> Automatic save/load to users.dat</li>
-                <li><strong>Input Validation:</strong> Enforces minimum password length</li>
-                <li><strong>Search:</strong> Quick user lookup by username</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🔒 Encryption Example</h3>
-            <div style="background: #f6f8fa; padding: 15px; border-radius: 8px; border: 1px solid #e1e4e8; font-family: 'Courier New', monospace; font-size: 13px; margin-bottom: 15px;">
-char encryptChar(char ch, int key) {
-    if (isalpha(ch)) {
-        char base = isupper(ch) ? 'A' : 'a';
-        return (ch - base + key) % 26 + base;
-    }
-    return ch;
-}
-            </div>
-            
-            <div style="background: #fff3cd; padding: 12px; border-left: 4px solid #ffc107; border-radius: 4px; margin-bottom: 15px;">
-                <strong>Educational Project:</strong> Caesar cipher is not cryptographically secure and should never be used for real password management.
-            </div>
-            
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <a href="https://github.com/RM1338/PassGuard" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-        </div>
-    </div>
+    </footer>
 
-    <!-- DietDash Detail -->
-    <div class="window window-detail" data-window-id="dietdash" style="width: 700px; height: 550px;">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">README.md — DietDash</div>
-        </div>
-        <div class="content" style="background: #fff;">
-            <h1 style="font-size: 28px; margin-bottom: 15px;">Diet Dash - Gamified Nutrition</h1>
-            <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-                <span class="tech-badge" style="background: #61DAFB;">React 18</span>
-                <span class="tech-badge" style="background: #339933;">Node.js</span>
-                <span class="tech-badge" style="background: #47A248;">MongoDB</span>
-            </div>
-            
-            <p style="margin-bottom: 20px; line-height: 1.6; color: #555;">A modern, interactive web application that makes learning about nutrition fun and engaging through gamification with 6 educational games and global leaderboards.</p>
-            
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🎮 Interactive Games</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li><strong>Food Sorting:</strong> Drag and drop foods into nutritional categories</li>
-                <li><strong>Meal Creator:</strong> Build balanced meals</li>
-                <li><strong>Nutrition Quiz:</strong> Test knowledge with multiple-choice questions</li>
-                <li><strong>Calorie Counter:</strong> Estimate calories and learn portion control</li>
-                <li><strong>Vitamin Match:</strong> Match vitamins with food sources</li>
-                <li><strong>Shopping Spree:</strong> Make healthy choices within budget</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🏆 Gamification</h3>
-            <p style="color: #555; line-height: 1.6;">Includes Points & Levels, Badges, Achievements, and Global Leaderboards to keep users engaged.</p>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🚀 Tech Stack</h3>
-            <p style="color: #555; line-height: 1.6;"><strong>Frontend:</strong> React.js, Tailwind CSS, Heroicons<br>
-            <strong>Backend:</strong> Node.js, Express, MongoDB, JWT Auth, Bcrypt</p>
-            
-            <div style="background: #d1ecf1; padding: 12px; border-left: 4px solid #17a2b8; border-radius: 4px; margin: 15px 0;">
-                <strong>Achievement:</strong> Qualified for Round 2 - Digital Campus 2.0 Hack Sprint (GeeksforGeeks)
-            </div>
-            
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <a href="https://github.com/RM1338/diet-dash" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VenturaFund Detail -->
-    <div class="window window-detail" data-window-id="venturafund" style="width: 700px; height: 550px;">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">README.md — VenturaFund</div>
-        </div>
-        <div class="content" style="background: #fff;">
-            <h1 style="font-size: 28px; margin-bottom: 15px;">VenturaFund - Crowdfunding Platform</h1>
-            <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-                <span class="tech-badge" style="background: #E34F26;">HTML5</span>
-                <span class="tech-badge" style="background: #1572B6;">CSS3</span>
-                <span class="tech-badge" style="background: #7952B3;">Bootstrap 5</span>
-            </div>
-            
-            <p style="margin-bottom: 20px; line-height: 1.6; color: #555;">A multi-category crowdfunding platform that enables users to create and support campaigns across Medical, Educational, Business, and Emergency needs.</p>
-            
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🎯 Multi-Category Support</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li><strong>Medical Campaigns:</strong> Support healthcare and treatment needs</li>
-                <li><strong>Educational Campaigns:</strong> Fund schools, scholarships, and learning</li>
-                <li><strong>Business Campaigns:</strong> Back entrepreneurial ventures and startups</li>
-                <li><strong>Emergency Campaigns:</strong> Provide relief for disasters</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">📊 Campaign Features</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li>Step-by-step campaign creation wizard</li>
-                <li>Real-time funding progress with visual indicators</li>
-                <li>Milestone system for transparent fund release</li>
-                <li>User authentication and dashboard</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">💳 Payment Ready</h3>
-            <p style="color: #555; line-height: 1.6;">Frontend ready for integration with Stripe, PayPal, and Razorpay payment gateways.</p>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">👥 Team Collaboration</h3>
-            <p style="color: #555; line-height: 1.6;">Built collaboratively by Code4Cause Team with role-based contributions for landing pages, authentication, and category management.</p>
-            
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <a href="https://github.com/RM1338/VenturaFund" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Todo Master Detail -->
-    <div class="window window-detail" data-window-id="todomaster" style="width: 700px; height: 550px;">
-        <div class="title-bar">
-            <div class="buttons">
-                <button class="btn-close"></button>
-                <button class="btn-minimize"></button>
-                <button class="btn-maximize"></button>
-            </div>
-            <div class="title">README.md — TodoMaster</div>
-        </div>
-        <div class="content" style="background: #fff;">
-            <h1 style="font-size: 28px; margin-bottom: 15px;">Todo Master - Task Management</h1>
-            <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-                <span class="tech-badge" style="background: #61DAFB;">React 18</span>
-                <span class="tech-badge" style="background: #1572B6;">CSS3</span>
-                <span class="tech-badge" style="background: #6366f1;">Context API</span>
-            </div>
-            
-            <p style="margin-bottom: 20px; line-height: 1.6; color: #555;">A modern, feature-rich task management application built with React, designed to help organize daily activities with glassmorphic design and advanced features.</p>
-            
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">📋 Task Management</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li><strong>Add/Edit/Delete:</strong> Full CRUD operations for tasks</li>
-                <li><strong>Priority Levels:</strong> High, Medium, Low assignments</li>
-                <li><strong>Categories:</strong> Work, Personal, Shopping, Health, General</li>
-                <li><strong>Due Dates:</strong> Set deadlines with overdue indicators</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🔍 Advanced Features</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li>Search functionality by title or description</li>
-                <li>Filter by status, category, and priority</li>
-                <li>Statistics dashboard with visual metrics</li>
-                <li>Sort by date, priority, or alphabetically</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">🎨 User Interface</h3>
-            <ul style="padding-left: 25px; line-height: 1.8; color: #555;">
-                <li>Glassmorphic design with modern aesthetics</li>
-                <li>Dark/Light theme toggle</li>
-                <li>Responsive layout for all devices</li>
-                <li>Smooth animations with Framer Motion</li>
-            </ul>
-            
-            <h3 style="margin: 20px 0 10px 0; color: #333;">💾 Data Management</h3>
-            <p style="color: #555; line-height: 1.6;">LocalStorage persistence with PWA support. No login required - all data stays private on your device.</p>
-            
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <a href="https://github.com/RM1338/todo-app" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-                <a href="https://rm1338.github.io/todo-app" target="_blank" class="project-link" style="background: #34c759;">
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dock -->
-    <div class="dock-container">
-        <div class="dock">
-            <div class="dock-item" data-window="about" title="About Me"><i class="fas fa-user-circle"></i></div>
-            <div class="dock-item" data-window="projects" title="Projects"><i class="fas fa-folder"></i></div>
-            <div class="dock-item" data-window="skills" title="Skills"><i class="fas fa-code"></i></div>
-            <div class="dock-item" data-window="experience" title="Experience"><i class="fas fa-briefcase"></i></div>
-            <div class="dock-item" data-window="terminal" title="Terminal"><i class="fas fa-terminal"></i></div>
-            <div class="dock-item" data-window="contact" title="Contact"><i class="fas fa-envelope"></i></div>
-            <div style="width: 1px; background: rgba(255,255,255,0.4); height: 40px; margin: 0 5px;"></div>
-            <a href="https://github.com/RM1338" target="_blank" class="dock-item" title="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    </div>
-
-    <script>
-// Global state
-let windowZIndex = 100;
-let draggedWindow = null;
-let dragOffsetX = 0;
-let dragOffsetY = 0;
-let terminalCommand = '';
-
-// Update clock
-function updateClock() {
-    const now = new Date();
-    document.getElementById('dateTime').textContent = now.toLocaleString('en-US', {
-        weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true
-    });
-}
-updateClock();
-setInterval(updateClock, 60000);
-
-// Window management
-function openWindow(windowId) {
-    const win = document.querySelector(`[data-window-id="${windowId}"]`);
-    if (win) {
-        win.classList.add('active');
-        win.style.zIndex = ++windowZIndex;
-    }
-}
-
-function closeWindow(win) {
-    win.style.animation = 'windowClose 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)';
-    setTimeout(() => {
-        win.classList.remove('active');
-        win.style.animation = '';
-    }, 280);
-}
-
-// Desktop icon single-click (changed from double-click)
-document.querySelectorAll('.desktop .icon[data-window]').forEach(icon => {
-    icon.addEventListener('click', (e) => {
-        e.preventDefault();
-        openWindow(icon.dataset.window);
-    });
-});
-
-// Dock single-click
-document.querySelectorAll('.dock-item[data-window]').forEach(item => {
-    item.addEventListener('click', () => openWindow(item.dataset.window));
-});
-
-// Project cards click to open details
-document.querySelectorAll('.project-card[data-project]').forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Don't open if clicking on a link or button
-        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
-            return;
-        }
-        const projectId = card.dataset.project;
-        openWindow(projectId);
-    });
-    
-    // Also handle button clicks inside cards
-    const detailBtn = card.querySelector('.project-link[style*="5856d6"]');
-    if (detailBtn) {
-        detailBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const projectId = card.dataset.project;
-            openWindow(projectId);
-        });
-    }
-});
-
-// Window close buttons
-document.querySelectorAll('.btn-close').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        closeWindow(e.target.closest('.window'));
-    });
-});
-
-// Window dragging
-document.querySelectorAll('.title-bar').forEach(bar => {
-    bar.addEventListener('mousedown', (e) => {
-        if (e.target.tagName === 'BUTTON') return;
-        draggedWindow = e.target.closest('.window');
-        draggedWindow.style.zIndex = ++windowZIndex;
-        draggedWindow.style.cursor = 'grabbing';
-        const rect = draggedWindow.getBoundingClientRect();
-        dragOffsetX = e.clientX - rect.left;
-        dragOffsetY = e.clientY - rect.top;
-    });
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (!draggedWindow) return;
-    draggedWindow.style.left = (e.clientX - dragOffsetX) + 'px';
-    draggedWindow.style.top = (e.clientY - dragOffsetY) + 'px';
-});
-
-document.addEventListener('mouseup', () => {
-    if (draggedWindow) {
-        draggedWindow.style.cursor = '';
-        draggedWindow = null;
-    }
-});
-
-// Context menu
-document.getElementById('desktop').addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-    const menu = document.getElementById('contextMenu');
-    menu.style.left = e.clientX + 'px';
-    menu.style.top = e.clientY + 'px';
-    menu.classList.add('active');
-});
-
-document.addEventListener('click', () => {
-    document.getElementById('contextMenu').classList.remove('active');
-});
-
-document.querySelectorAll('.context-menu-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-        const action = e.target.closest('.context-menu-item').dataset.action;
-        if (action === 'refresh') {
-            location.reload();
-        }
-        if (action === 'wallpaper') {
-            const wallpapers = [
-                'https://images.unsplash.com/photo-1519681393784-d120267933ba',
-                'https://images.unsplash.com/photo-1464802686167-b939a6910659',
-                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4'
-            ];
-            const randomWallpaper = wallpapers[Math.floor(Math.random() * wallpapers.length)];
-            document.body.style.background = `url('${randomWallpaper}?w=1920') no-repeat center center/cover`;
-        }
-    });
-});
-
-// Terminal functionality
-const terminalOutput = document.getElementById('terminalContent');
-const terminalPrompt = document.getElementById('terminalPrompt');
-
-document.getElementById('terminalContent').addEventListener('click', () => {
-    document.addEventListener('keydown', handleTerminalKey);
-});
-
-function handleTerminalKey(e) {
-    const activeTerminal = document.querySelector('.window-terminal.active');
-    if (!activeTerminal) return;
-
-    if (e.key === 'Enter') {
-        executeTerminalCommand(terminalCommand);
-        terminalCommand = '';
-        terminalPrompt.textContent = '';
-    } else if (e.key === 'Backspace') {
-        e.preventDefault();
-        terminalCommand = terminalCommand.slice(0, -1);
-        terminalPrompt.textContent = terminalCommand;
-    } else if (e.key.length === 1) {
-        terminalCommand += e.key;
-        terminalPrompt.textContent = terminalCommand;
-    }
-}
-
-function executeTerminalCommand(cmd) {
-    terminalOutput.innerHTML += `<p><span class="green">ronel@macbook</span>:<span class="blue">~</span>$ ${cmd}</p>`;
-    
-    const commands = {
-        'help': 'Available commands: help, clear, projects, about, skills, contact, date, whoami, ls, pwd',
-        'clear': () => { terminalOutput.innerHTML = ''; return ''; },
-        'projects': 'FlappyBird (C/Raylib)\nPassGuard (Security/C)\nDietDash (MERN Stack)\nVenturaFund (HTML/CSS/Bootstrap)\nTodo Master (React)',
-        'about': 'Ronel Abraham Mathew - B.Tech CSE Student & Full Stack Developer',
-        'skills': 'Languages: C, JavaScript, Python, HTML, CSS\nFrameworks: React.js, Node.js, Express, Raylib\nDatabases: MongoDB, MySQL',
-        'contact': 'Email: rma80070@gmail.com\nGitHub: github.com/RM1338',
-        'date': new Date().toString(),
-        'whoami': 'ronel',
-        'ls': 'AboutMe  Projects  Skills  Experience  Terminal  Contact',
-        'pwd': '/Users/ronel/portfolio'
-    };
-    
-    if (commands[cmd]) {
-        const result = typeof commands[cmd] === 'function' ? commands[cmd]() : commands[cmd];
-        if (result) {
-            terminalOutput.innerHTML += `<p>${result.replace(/\n/g, '<br>')}</p>`;
-        }
-    } else if (cmd.trim()) {
-        terminalOutput.innerHTML += `<p>Command not found: ${cmd}. Type 'help' for available commands.</p>`;
-    }
-    
-    terminalOutput.innerHTML += `<p><span class="green">ronel@macbook</span>:<span class="blue">~</span>$ <span id="terminalPrompt"></span><span class="cursor">_</span></p>`;
-    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-}
-
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! (This is a demo portfolio)');
-    e.target.reset();
-});
-    </script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
